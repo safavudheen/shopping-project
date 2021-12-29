@@ -1,0 +1,40 @@
+<Container>
+  <Col>
+  <div class="m-5 p-5">
+    <table class="table table-success table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope='col'>Date</th>
+          <th scope="col">Address</th>
+          <th scope="col">Mobile</th>
+          <th scope="col">Payment method</th>
+          <th scope="col">Price</th>
+          <th scope="col">product</th>
+          <th scope="col">Order Status</th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        {{#each orders}}
+        <tr>
+
+          <th scope="row">  </th>
+          <td style="font-size: xx-small;    width: 10px;">{{this.date}}</td>
+          <td>{{this.deliveryDetails.address}}<br>
+            {{this.deliveryDetails.pincode}}
+          </td>
+          <td>{{this.deliveryDetails.mobile}}</td>
+
+          <td>{{this.paymentMethod}}</td>
+          <td>{{this.totalAmount}}</td>
+          <td>@mdo</td>
+          <td>{{this.status}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+  </Col>
+</Container>
